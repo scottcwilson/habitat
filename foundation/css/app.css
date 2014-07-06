@@ -1,0 +1,34 @@
+.hero-unit {
+    height: 110px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 0px solid rgba(0,0,0,.25);
+    border-radius: 8px;
+    box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,.0	);
+    padding: 15px 0;
+    margin-bottom: 20px;
+    /*background: url(../img/banner-lg-1100.jpg) right no-repeat;*/
+    /*background: url(../images/Zen-cart-hero.png) bottom right no-repeat;*/
+}
+
+.logo {
+    background: url(../../images/zen-cart-logo-lg.png) left no-repeat;
+    width: 270px;
+    float: left;
+    display: block;
+    height: 100%;
+}
+#forkme_banner {
+    display: block;
+    position: absolute;
+    top:0;
+    right: 10px;
+    z-index: 10;
+    padding: 10px 50px 10px 10px;
+    color: #fff;
+    background: url('../../images/blacktocat.png') #0090ff no-repeat 95% 50%;
+    font-weight: 700;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+}

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen Cart Habitat - Introduction</title>
+    <title>Zen Cart Habitat - Installing</title>
     <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
     <link rel="stylesheet" href="foundation/css/normalize.css">
     <link rel="stylesheet" href="foundation/css/foundation.min.css">
@@ -27,20 +27,34 @@
     <div class="row">
         <div class="medium-2 columns">
             <ul class="side-nav">
-                <li class="active"><a href="index.html">Introduction</a></li>
-                <li><a href="installation.html">Installation</a></li>
+                <li><a href="index.html">Introduction</a></li>
+                <li class="active"><a href="installation.html">Installation</a></li>
                 <li><a href="using.html">Using Habitat</a></li>
                 <li><a href="customising.html">Customising</a></li>
                 <li><a href="technical.html">Technical</a></li>
             </ul>
         </div>
         <div class="medium-10 columns">
-            <h1>Welcome to Habitat</h1>
-            <p>Habitat was inspired by <a href="http://github.com/laravel/homestead">Laravel Homestead</a></p>
-            <p>Habitat is a Vagrant based virtual machine, with a build/script system to provision the VM automatically based on settings you decide.</p>
-            <p>With default settings, it will link a current checkout of the v160 github repository to a domain name that you can access directly from your browser.</p>
-            <p>A yaml based configuration system lets you customize your system by adding new shared directories which may map to new websites, and automatically clone other github repositories/branches into those websites.</p>
-            <div class="panel callout radius"><p>You can contribute to this documentation using the gh-pages branch of the Habitat repository</p> </div>        </div>
+            <h1>Installation</h1>
+            <h3>Prerequisites</h3>
+            <p>Install Virtualbox and Vagrant</p>
+            <div class="panel"> <span class="label">Ubuntu</span><p>sudo apt-get install virttualbox</p><p>sudo apt-get install vagrant</p></div>
+            <div class="panel"> <span class="label">Windows</span><span class="label">Mac OSX</span><p>https://www.virtualbox.org/wiki/Downloads</p><p>https://www.vagrantup.com/downloads.html</p></div>
+            <h3>Install Habitat</h3>
+            <p>Clone the habitat repository.</p>
+            <div class="panel"><span class="alert label">Command Line</span><p>git clone https://github.com/zencart/habitat</p> </div>
+            <p>Add the Virtual Machine to Vagrant.</p>
+            <div class="panel"><span class="alert label">Command Line</span><p>vagrant box add habitat http://s3.amazon.com</p> </div>
+            <p>Update your hosts file</p>
+            <div class="panel"> <span class="label">Ubuntu</span><span class="label">Mac OSX</span><p>edit /etc/hosts</p></div>
+            <div class="panel"> <span class="label">Windows</span><p>%systemroot%\system32\drivers\etc\hosts</p><p>Where %systemroot% is usually c:/windows</p></div>
+            <p>And add this line</p>
+            <div class="panel"><p>172.22.22.22 zen.local</p></div>
+            <p>You can now start the habitat virtual machine</p>
+            <div class="panel"><span class="alert label">Command Line</span><p>vagrant up</p></div>
+
+
+        </div>
     </div>
 </div>
 <footer class="footer">
@@ -48,7 +62,7 @@
         <div class="small-12 columns small-centered">
             <br><br>
            <p>Copyright &copy; <a href="http://www.zen-cart.com" target="_blank">Zen Cart&reg;</a></p>
-            </div>
+         </div>
        </div>
 </footer>
 
