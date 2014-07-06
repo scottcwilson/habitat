@@ -36,7 +36,39 @@
         </div>
         <div class="medium-10 columns">
             <h1>Customising Habitat</h1>
-            <div class="panel callout radius"><p>Coming Soon</p> </div>
+            <p>Customising habitat can be done using the include Habitat.yaml file.</p>
+            <p>The options are.</p>
+            <h3>do_default_site:</h3>
+            <p>This can be true or false. In the default yaml file it is set to true, and controls whether the zen.local domain is configured with a checkout of the v160 github code.</p>
+            <p>Unless you want to customise the way the code chackout is done, there is little reason to change this setting</p>
+            <h3>do_default_map:</h3>
+            <p>This can be true or false. In the default yaml file it is set to true, and controls whether to share the internal habitat directory with the host machine.</p>
+            <p>Again there is little reason to change this setting unless you have advanced knowledge of managing a vagrant virtual machine.</p>
+            <h3>sites:</h3>
+            <p>This option can be used create other virtual domains that map to a directory and optionally clone a github repository into that directory</p>
+            <p>Here's an example</p>
+            <div class="panel"><p><pre>
+                sites:
+                  - skeleton: apache.default
+                    domain: v150.local
+                    dir: v150
+                    github: https://github.com/zencart/zc-v1-series.git
+                    branch: v150-release
+            </pre></p>
+            </div>
+            <p>The options within the sites directive are :-</p>
+            <h4>skeleton:</h4>
+            <p>In order to provision apache correctly, we use a skeleton vhosts file.</p>
+            <p>These skeleton files are stored in the shared scripts/skeletons directory.</p>
+            <p>There is currently only one skeleton file (apache.default). However others may be made available, or you may want to create your own.</p>
+            <h4>domain:</h4>
+            <p>This is the name of the domain that you want to map to your shared site. Currently, you will also have to create an entry in your hosts files for the domain.</p>
+            <h4>dir:</h4>
+            <p>This is the directory, relative to the shared habitat/web directory, that you want to be the web root of your site.</p>
+            <h4>github:</h4>
+            <p>This directive is optional, but if set will be used aas a directory to execute a git clone with.</p>
+            <h4>branch:</h4>
+            <p>This directive is optional, but if set will be used to execute a git checkout command with.</p>
         </div>
     </div>
 </div>
