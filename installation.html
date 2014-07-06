@@ -42,9 +42,9 @@
             <div class="panel"> <span class="label">Windows</span><span class="label">Mac OSX</span><p>https://www.virtualbox.org/wiki/Downloads</p><p>https://www.vagrantup.com/downloads.html</p></div>
             <h3>Install Habitat</h3>
             <p>Clone the habitat repository.</p>
-            <div class="panel"><span class="alert label">Command Line</span><p>git clone https://github.com/zencart/habitat</p> </div>
+            <div class="panel"><span class="alert label">Command Line</span><p>git clone https://github.com/zencart/habitat</p><p>Then change into the newly created habitat directory.</p> </div>
             <p>Add the Virtual Machine to Vagrant.</p>
-            <div class="panel"><span class="alert label">Command Line</span><p>vagrant box add habitat http://s3.amazon.com</p> </div>
+            <div class="panel"><span class="alert label">Command Line</span><p>vagrant box add habitat https://s3.amazonaws.com/zencart-vagrant-boxes/habitat.box</p> </div>
             <p>Update your hosts file</p>
             <div class="panel"> <span class="label">Ubuntu</span><span class="label">Mac OSX</span><p>edit /etc/hosts</p></div>
             <div class="panel"> <span class="label">Windows</span><p>%systemroot%\system32\drivers\etc\hosts</p><p>Where %systemroot% is usually c:/windows</p></div>
