@@ -56,9 +56,24 @@
             <p>There is little reason to change this setting unless you have advanced knowledge of managing a vagrant virtual machine.</p>
             <h3>sites:</h3>
             <p>This option can be used create other virtual domains that map to a directory and optionally clone a github repository into that directory</p>
-            <p>Here's an example</p>
+            <p>By default it contains :-</p>
             <div class="panel"><p><pre>
                 sites:
+                  - skeleton: apache.default
+                    domain: zen.local
+                    dir: zen
+                    github: https://github.com/zencart/zc-v1-series.git
+                    branch: v160
+              </pre></p>
+            </div>
+            <p>If you want to add another site, you can do</p>
+            <div class="panel"><p><pre>
+                sites:
+                  - skeleton: apache.default
+                    domain: zen.local
+                    dir: zen
+                    github: https://github.com/zencart/zc-v1-series.git
+                    branch: v160
                   - skeleton: apache.default
                     domain: v150.local
                     dir: v150
