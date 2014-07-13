@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zen Cart Habitat - Installing</title>
+    <title>Zen Cart Habitat - Using</title>
     <!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
     <link rel="stylesheet" href="foundation/css/normalize.css">
     <link rel="stylesheet" href="foundation/css/foundation.min.css">
@@ -28,8 +28,8 @@
         <div class="medium-2 columns">
             <ul class="side-nav">
                 <li><a href="index.html">Introduction</a></li>
-                <li class="active"><a href="installation.html">Installation</a></li>
-                <li><a href="coding.html">Code Development</a></li>
+                <li><a href="installation.html">Installation</a></li>
+                <li class="active"><a href="coding.html">Code Development</a></li>
                 <li><a href="documentation_proj.html">Documentation Project</a></li>
                 <li><a href="customising.html">Customising</a></li>
                 <li><a href="development_tools.html">Development Tools</a></li>
@@ -37,34 +37,27 @@
             </ul>
         </div>
         <div class="medium-10 columns">
-            <h1>Installation</h1>
-            <h3>Prerequisites</h3>
-            <p>Install Virtualbox and Vagrant</p>
-            <div class="panel"> <span class="label">Ubuntu</span><p>sudo apt-get install virtualbox</p><p>sudo apt-get install vagrant</p></div>
-            <div class="panel"> <span class="label">Windows</span><span class="label">Mac OSX</span><p>https://www.virtualbox.org/wiki/Downloads</p><p>https://www.vagrantup.com/downloads.html</p></div>
-            <h3>Install Habitat</h3>
-            <p>Clone the habitat repository.</p>
-            <div class="panel"><span class="alert label">Command Line</span><p>git clone https://github.com/zencart/habitat</p><p>Then change into the newly created habitat directory.</p> </div>
-            <p>Add the Virtual Machine to Vagrant.</p>
-            <div class="panel"><span class="alert label">Command Line</span><p>vagrant box add zencart/habitat https://s3.amazonaws.com/zencart-vagrant-boxes/habitat.box</p> </div>
-            <p>Update your hosts file</p>
-            <div class="panel"> <span class="label">Ubuntu</span><span class="label">Mac OSX</span><p>/etc/hosts</p></div>
-            <div class="panel"> <span class="label">Windows</span><p>%systemroot%\system32\drivers\etc\hosts</p><p>Where %systemroot% is usually c:/windows</p></div>
-            <p>And add this line</p>
-            <div class="panel"><p>172.22.22.22 zen.local</p><p>172.22.22.22 devdocs.local</p></div>
-            <p>Before you start up the VM you may want to customise the environment. If so see the <a href="customising.html">Customising Page</a> otherwise you can start the VM.</p>
-            <div class="panel"><span class="alert label">Command Line</span><p>vagrant up</p></div>
-
+            <h1>Code Development</h1>
+            <p>The Habitat VM initially links a domain <strong>zen.local</strong> to a checkout of the Zen Cart&reg; v160 branch, unless you have customised the Habitat.local.yaml</p>
+            <p>You should be able to just open a browser and enter the <strong>http://zen.local</strong> URL to see the site.</p>
+            <p>The directory that the code is stored in within the VM is shared to the habitat directory that was created earlier under the <em>habitat/web/zen</em> folder.</p>
+            <p>As this directory is shared with the virtual machine, you can edit the files locally in your favorite editor, and see the changes immediately reflected in your browser.</p>
+            <p>More information on managing your VM can be found on the <a href="https://docs.vagrantup.com/v2/">Vagrant</a> website.</p>
+            <div class="panel callout">
+                <h3>Passwords</h3><p>The administrator user/password for MySql is</p><p>user = root</p><p>password = zencart</p>
+                <p>phpMyAdmin is installed and available in your browser as http://zen.local/phpmyadmin</p><p>user = root</p><p>password = zencart</p>
+                <p></p>
+            </div>
 
         </div>
-    </div>
+        </div>
 </div>
 <footer class="footer">
     <div class="row">
         <div class="small-12 columns small-centered">
             <br><br>
            <p>Copyright &copy; <a href="http://www.zen-cart.com" target="_blank">Zen Cart&reg;</a></p>
-         </div>
+            </div>
        </div>
 </footer>
 
